@@ -4,7 +4,7 @@ const { write } = require("fs");
 const fs = require("fs/promises");
 const { execPath } = require("process");
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 3000;
 
 const filepath = "./utils/expenses.json";
 app.use(express.json());
